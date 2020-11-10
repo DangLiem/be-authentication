@@ -14,4 +14,5 @@ public interface UserService {
     public String deleteUser(Integer id);
     public User updateUser(User user);
     public User getUserByEmail(String email);
+    public User findByMssv(String mssv);
 }

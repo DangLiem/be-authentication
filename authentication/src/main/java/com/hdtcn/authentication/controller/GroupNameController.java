@@ -10,10 +10,11 @@ import java.util.List;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
-@RequestMapping("/groups")
+@RequestMapping("/api")
 public class GroupNameController {
     @Autowired
     private GroupNameService groupNameService;
+    @GetMapping("/groups")
     public ResponseEntity<?> getListGroup() {
         List<GroupName> groups = groupNameService.getGroupNames();
         return ResponseEntity.ok(groups);

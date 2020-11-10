@@ -61,4 +61,9 @@ public class UserServiceImp implements UserService {
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    @Override
+    public User findByMssv(String mssv) {
+        return userRepository.findByMssv(mssv);
+    }
 }
